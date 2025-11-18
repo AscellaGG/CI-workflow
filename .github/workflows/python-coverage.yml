@@ -34,9 +34,9 @@ jobs:
       - name: Coverage comment
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
-          GITHUB-TOKEN: ${{ github.token }}
-          MINIMUM-GREEN: 90
-          MINIMUM-ORANGE: 70
+          GITHUB_TOKEN: ${{ github.token }}
+          MINIMUM_GREEN: 90
+          MINIMUM_ORANGE: 70
 
       - name: Fail if below threshold
         run: coverage report --fail-under=90
